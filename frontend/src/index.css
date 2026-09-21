@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default Dark Mode Root */
+  html.dark body {
+    @apply bg-[#0c1218] text-slate-200 font-sans antialiased overflow-x-hidden;
+  }
+
+  /* Light Mode Root */
+  html.light body {
+    @apply bg-[#f4f7f6] text-slate-800 font-sans antialiased overflow-x-hidden;
+  }
+
+  /* Dark mode scrollbars */
+  html.dark ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  html.dark ::-webkit-scrollbar-track {
+    background: #121b24;
+  }
+  html.dark ::-webkit-scrollbar-thumb {
+    background: #34A99D;
+    border-radius: 4px;
+  }
+  html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #458393;
+  }
+
+  /* Light mode scrollbars */
+  html.light ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  html.light ::-webkit-scrollbar-track {
+    background: #e2e8f0;
+  }
+  html.light ::-webkit-scrollbar-thumb {
+    background: #34A99D;
+    border-radius: 4px;
+  }
+  html.light ::-webkit-scrollbar-thumb:hover {
+    background: #458393;
+  }
+}
+
+@layer components {
+  /* Dark mode glass panel */
+  html.dark .glass-panel {
+    @apply bg-[#192633]/85 backdrop-blur-md border border-[#458393]/30 rounded-2xl shadow-lg shadow-black/30 text-slate-100;
+  }
+  
+  html.dark .glass-panel-hover {
+    @apply transition-all duration-200 hover:border-[#34A99D]/50 hover:bg-[#1f2f3f]/90 hover:shadow-xl;
+  }
+
+  /* Light mode glass panel */
+  html.light .glass-panel {
+    @apply bg-white/95 backdrop-blur-md border border-slate-200 rounded-2xl shadow-md shadow-slate-200/60 text-slate-800;
+  }
+
+  html.light .glass-panel-hover {
+    @apply transition-all duration-200 hover:border-[#34A99D]/60 hover:bg-slate-50/90 hover:shadow-lg;
+  }
+
+  /* Badges - Dark */
+  html.dark .badge-low {
+    @apply bg-[#34A99D]/15 text-[#34A99D] border border-[#34A99D]/30 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+  }
+  html.dark .badge-medium {
+    @apply bg-[#E5CB90]/15 text-[#E5CB90] border border-[#E5CB90]/30 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+  }
+  html.dark .badge-high {
+    @apply bg-rose-500/15 text-rose-300 border border-rose-500/25 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+  }
+
+  /* Badges - Light */
+  html.light .badge-low {
+    @apply bg-emerald-100 text-emerald-800 border border-emerald-300 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+  }
+  html.light .badge-medium {
+    @apply bg-amber-100 text-amber-800 border border-amber-300 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+  }
+  html.light .badge-high {
+    @apply bg-rose-100 text-rose-800 border border-rose-300 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+  }
+
+  .security-glow {
+    box-shadow: 0 0 30px -5px rgba(52, 169, 157, 0.25);
+  }
+}

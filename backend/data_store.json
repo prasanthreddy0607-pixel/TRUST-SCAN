@@ -1,0 +1,1140 @@
+{
+  "DEMO-CLEAN_-743": {
+    "screening_id": "DEMO-CLEAN_-743",
+    "filename": "demo_clean_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 12:25:43",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.1,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Photo boundary uniform.",
+          "details": {}
+        },
+        {
+          "detector": "text_manipulation",
+          "score": 0.08,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Font stroke uniform.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.1,
+      "suspicious_regions_count": 0,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 12,
+      "risk_level": "LOW",
+      "confidence": 0.96,
+      "recommendation": "ACCEPTABLE",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": []
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **12/100** (**LOW Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n* No significant anomalies or rule violations detected during processing.\n\n## Why Review Is Recommended\nBased on a risk score of 12/100, the system recommends **ACCEPTABLE**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-CLEAN_-743.pdf",
+    "processing_time_ms": 0
+  },
+  "DEMO-CLEAN_-137": {
+    "screening_id": "DEMO-CLEAN_-137",
+    "filename": "demo_clean_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 12:32:17",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.1,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Photo boundary uniform.",
+          "details": {}
+        },
+        {
+          "detector": "text_manipulation",
+          "score": 0.08,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Font stroke uniform.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.1,
+      "suspicious_regions_count": 0,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 12,
+      "risk_level": "LOW",
+      "confidence": 0.96,
+      "recommendation": "ACCEPTABLE",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": []
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **12/100** (**LOW Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n* No significant anomalies or rule violations detected during processing.\n\n## Why Review Is Recommended\nBased on a risk score of 12/100, the system recommends **ACCEPTABLE**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-CLEAN_-137.pdf",
+    "processing_time_ms": 0
+  },
+  "DEMO-CLEAN_-191": {
+    "screening_id": "DEMO-CLEAN_-191",
+    "filename": "demo_clean_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 12:33:11",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.1,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Photo boundary uniform.",
+          "details": {}
+        },
+        {
+          "detector": "text_manipulation",
+          "score": 0.08,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Font stroke uniform.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.1,
+      "suspicious_regions_count": 0,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 12,
+      "risk_level": "LOW",
+      "confidence": 0.96,
+      "recommendation": "ACCEPTABLE",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": []
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **12/100** (**LOW Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n* No significant anomalies or rule violations detected during processing.\n\n## Why Review Is Recommended\nBased on a risk score of 12/100, the system recommends **ACCEPTABLE**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-CLEAN_-191.pdf",
+    "processing_time_ms": 0
+  },
+  "DEMO-CLEAN_-260": {
+    "screening_id": "DEMO-CLEAN_-260",
+    "filename": "demo_clean_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 12:34:20",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.1,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Photo boundary uniform.",
+          "details": {}
+        },
+        {
+          "detector": "text_manipulation",
+          "score": 0.08,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Font stroke uniform.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.1,
+      "suspicious_regions_count": 0,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 12,
+      "risk_level": "LOW",
+      "confidence": 0.96,
+      "recommendation": "ACCEPTABLE",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": []
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **12/100** (**LOW Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n* No significant anomalies or rule violations detected during processing.\n\n## Why Review Is Recommended\nBased on a risk score of 12/100, the system recommends **ACCEPTABLE**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-CLEAN_-260.pdf",
+    "processing_time_ms": 0
+  },
+  "DEMO-CLEAN_-354": {
+    "screening_id": "DEMO-CLEAN_-354",
+    "filename": "demo_clean_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 12:35:54",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.1,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Photo boundary uniform.",
+          "details": {}
+        },
+        {
+          "detector": "text_manipulation",
+          "score": 0.08,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Font stroke uniform.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.1,
+      "suspicious_regions_count": 0,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 12,
+      "risk_level": "LOW",
+      "confidence": 0.96,
+      "recommendation": "ACCEPTABLE",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": []
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **12/100** (**LOW Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n* No significant anomalies or rule violations detected during processing.\n\n## Why Review Is Recommended\nBased on a risk score of 12/100, the system recommends **ACCEPTABLE**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-CLEAN_-354.pdf",
+    "processing_time_ms": 0
+  },
+  "DEMO-TAMPER-387": {
+    "screening_id": "DEMO-TAMPER-387",
+    "filename": "demo_tampered_photo_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 12:36:27",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.82,
+          "severity": "HIGH",
+          "status": "SUSPICIOUS",
+          "region": {
+            "x": 100,
+            "y": 180,
+            "width": 220,
+            "height": 260,
+            "label": "Photo Region Anomaly"
+          },
+          "explanation": "Photo region shows ELA compression inconsistency and boundary edge discontinuity.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.82,
+      "suspicious_regions_count": 1,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 72,
+      "risk_level": "HIGH",
+      "confidence": 0.89,
+      "recommendation": "REVIEW_REQUIRED",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": [
+        {
+          "title": "Photo Region Anomaly",
+          "severity": "HIGH",
+          "confidence": 0.82,
+          "source": "Image Forensics",
+          "description": "Photo region shows image-level characteristics that differ from surrounding document regions."
+        }
+      ]
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **72/100** (**HIGH Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n- \ud83d\udd34 **Photo Region Anomaly** (Image Forensics): Photo region shows image-level characteristics that differ from surrounding document regions.\n\n## Why Review Is Recommended\nBased on a risk score of 72/100, the system recommends **REVIEW REQUIRED**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-TAMPER-387.pdf",
+    "processing_time_ms": 0
+  },
+  "DEMO-TAMPER-560": {
+    "screening_id": "DEMO-TAMPER-560",
+    "filename": "demo_tampered_photo_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 14:02:40",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.82,
+          "severity": "HIGH",
+          "status": "SUSPICIOUS",
+          "region": {
+            "x": 100,
+            "y": 180,
+            "width": 220,
+            "height": 260,
+            "label": "Photo Region Anomaly"
+          },
+          "explanation": "Photo region shows ELA compression inconsistency and boundary edge discontinuity.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.82,
+      "suspicious_regions_count": 1,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 72,
+      "risk_level": "HIGH",
+      "confidence": 0.89,
+      "recommendation": "REVIEW_REQUIRED",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": [
+        {
+          "title": "Photo Region Anomaly",
+          "severity": "HIGH",
+          "confidence": 0.82,
+          "source": "Image Forensics",
+          "description": "Photo region shows image-level characteristics that differ from surrounding document regions."
+        }
+      ]
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **72/100** (**HIGH Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n- \ud83d\udd34 **Photo Region Anomaly** (Image Forensics): Photo region shows image-level characteristics that differ from surrounding document regions.\n\n## Why Review Is Recommended\nBased on a risk score of 72/100, the system recommends **REVIEW REQUIRED**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-TAMPER-560.pdf",
+    "processing_time_ms": 0
+  },
+  "DEMO-CLEAN_-745": {
+    "screening_id": "DEMO-CLEAN_-745",
+    "filename": "demo_clean_passport.png",
+    "file_path": "demo_data/clean_passport.png",
+    "document_type": "passport",
+    "created_at": "2026-09-21 14:39:05",
+    "status": "COMPLETED",
+    "ocr_result": {
+      "document_type": "passport",
+      "fields": {
+        "name": {
+          "value": "SAMPLE PERSON",
+          "confidence": 0.98,
+          "bounding_box": null
+        },
+        "passport_number": {
+          "value": "DEMO-P123456",
+          "confidence": 0.96,
+          "bounding_box": null
+        },
+        "date_of_birth": {
+          "value": "2002-04-15",
+          "confidence": 0.97,
+          "bounding_box": null
+        },
+        "expiry_date": {
+          "value": "2032-04-14",
+          "confidence": 0.98,
+          "bounding_box": null
+        }
+      },
+      "raw_ocr": [],
+      "overall_confidence": 0.97
+    },
+    "mrz_result": {
+      "detected": true,
+      "raw_mrz": [
+        "P<DEMOSAMPLE<<PERSON<<<<<<<<<<<<<<<<<<<<<<",
+        "DEMO-P123456DEM8504152M3204147<<<<<<<<<<<<<<02"
+      ],
+      "document_code": null,
+      "issuing_country": null,
+      "surname": "SAMPLE",
+      "given_names": "PERSON",
+      "passport_number": "DEMO-P123456",
+      "nationality": null,
+      "date_of_birth": "2002-04-15",
+      "sex": null,
+      "expiry_date": "2032-04-14",
+      "check_digits_valid": true,
+      "field_comparisons": {
+        "date_of_birth": {
+          "ocr": "2002-04-15",
+          "mrz": "2002-04-15",
+          "consistent": true
+        },
+        "passport_number": {
+          "ocr": "DEMO-P123456",
+          "mrz": "DEMO-P123456",
+          "consistent": true
+        }
+      }
+    },
+    "validation_result": {
+      "document_type": "passport",
+      "valid": true,
+      "checks": [
+        {
+          "rule_name": "expiry_validity",
+          "passed": true,
+          "severity": "LOW",
+          "message": "Document active.",
+          "field": null
+        },
+        {
+          "rule_name": "mrz_consistency",
+          "passed": true,
+          "severity": "LOW",
+          "message": "MRZ and OCR match.",
+          "field": null
+        }
+      ],
+      "total_checks": 2,
+      "passed_checks": 2,
+      "failed_checks": 0
+    },
+    "forensic_result": {
+      "findings": [
+        {
+          "detector": "photo_tampering",
+          "score": 0.1,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Photo boundary uniform.",
+          "details": {}
+        },
+        {
+          "detector": "text_manipulation",
+          "score": 0.08,
+          "severity": "LOW",
+          "status": "CLEAN",
+          "region": null,
+          "explanation": "Font stroke uniform.",
+          "details": {}
+        }
+      ],
+      "overall_tampering_score": 0.1,
+      "suspicious_regions_count": 0,
+      "annotated_image_url": null
+    },
+    "face_result": {
+      "similarity": 0.92,
+      "status": "MATCH",
+      "confidence": 0.94,
+      "detected_in_document": true,
+      "detected_in_reference": true,
+      "details": "Facial match confirmed."
+    },
+    "watchlist_result": {
+      "matched": false,
+      "document_number": "DEMO-P123456",
+      "status": "CLEAN",
+      "reason": null,
+      "disclaimer": "Demo database \u2014 not connected to government systems."
+    },
+    "risk_assessment": {
+      "risk_score": 12,
+      "risk_level": "LOW",
+      "confidence": 0.96,
+      "recommendation": "ACCEPTABLE",
+      "weights_used": {},
+      "signal_scores": {},
+      "evidence": []
+    },
+    "ai_summary": "## Screening Summary\nAutomated risk assessment calculated a screening score of **12/100** (**LOW Risk**). The evaluation evaluated document rules, optical character recognition consistency, image forensics, face matching, and metadata signals.\n\n## Key Findings\n* No significant anomalies or rule violations detected during processing.\n\n## Why Review Is Recommended\nBased on a risk score of 12/100, the system recommends **ACCEPTABLE**. SCREENAI provides decision support only. Border screening officers should inspect physical security features, perform secondary inspection, and conduct manual verification as per official protocol.",
+    "original_image_url": "demo_data/clean_passport.png",
+    "annotated_image_url": null,
+    "report_pdf_url": "E:\\Mine\\Full Stack AI Projects\\TRUST SCAN\\backend\\reports_gen\\Report_DEMO-CLEAN_-745.pdf",
+    "processing_time_ms": 0
+  }
+}
