@@ -58,11 +58,11 @@
 
   /* Light mode glass panel */
   html.light .glass-panel {
-    @apply bg-white/95 backdrop-blur-md border border-slate-200 rounded-2xl shadow-md shadow-slate-200/60 text-slate-800;
+    @apply bg-white border border-slate-200/80 rounded-2xl shadow-sm text-slate-900;
   }
 
   html.light .glass-panel-hover {
-    @apply transition-all duration-200 hover:border-[#34A99D]/60 hover:bg-slate-50/90 hover:shadow-lg;
+    @apply transition-all duration-200 hover:border-[#34A99D]/50 hover:shadow-md;
   }
 
   /* Badges - Dark */
