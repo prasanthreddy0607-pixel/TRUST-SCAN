@@ -26,12 +26,12 @@ export const RiskOverview: React.FC<RiskOverviewProps> = ({ screenings }) => {
 
   return (
     <div className="glass-panel p-5 flex flex-col h-full">
-      <h3 className="font-bold text-slate-100 text-sm tracking-wide">Risk Assessment Distribution</h3>
-      <p className="text-xs text-slate-400 mb-4">Inspection breakdown by evidence severity level</p>
+      <h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm tracking-wide">Risk Assessment Distribution</h3>
+      <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">Inspection breakdown by evidence severity level</p>
 
       <div className="flex-1 min-h-[220px] w-full flex items-center justify-center">
         {screenings.length === 0 ? (
-          <p className="text-xs font-mono text-slate-500">No data available for chart visualization</p>
+          <p className="text-xs font-mono text-slate-500 dark:text-slate-400">No data available for chart visualization</p>
         ) : (
           <ResponsiveContainer width="100%" height={220}>
             <PieChart>

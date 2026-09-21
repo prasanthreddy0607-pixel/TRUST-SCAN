@@ -11,16 +11,16 @@ interface EvidenceListProps {
 export const EvidenceList: React.FC<EvidenceListProps> = ({ evidence, onSelectEvidence }) => {
   return (
     <div className="glass-panel p-5 space-y-4">
-      <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
         <div className="flex items-center gap-2">
-          <FileSearch className="w-4 h-4 text-blue-400" />
-          <h3 className="font-bold text-slate-100 text-sm tracking-wide">Extracted Evidence Signals ({evidence.length})</h3>
+          <FileSearch className="w-4 h-4 text-[#34A99D]" />
+          <h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm tracking-wide">Extracted Evidence Signals ({evidence.length})</h3>
         </div>
         <span className="text-[11px] text-slate-500 font-mono">Traceable Findings</span>
       </div>
 
       {evidence.length === 0 ? (
-        <div className="p-6 text-center text-slate-500 font-mono text-xs border border-dashed border-slate-800 rounded-lg">
+        <div className="p-6 text-center text-slate-500 font-mono text-xs border border-dashed border-slate-300 dark:border-slate-800 rounded-lg">
           No anomalous risk evidence recorded. Document parameters pass baseline checks.
         </div>
       ) : (
@@ -31,30 +31,30 @@ export const EvidenceList: React.FC<EvidenceListProps> = ({ evidence, onSelectEv
               <div
                 key={idx}
                 onClick={() => onSelectEvidence && onSelectEvidence(item)}
-                className="p-3.5 rounded-lg border border-slate-800 bg-navy-950/60 hover:bg-slate-800/60 transition-all cursor-pointer space-y-2 group"
+                className="p-3.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-navy-950/60 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all cursor-pointer space-y-2 group"
               >
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-center gap-2">
-                    <ShieldAlert className={`w-4 h-4 ${item.severity === 'HIGH' ? 'text-red-400' : 'text-amber-400'}`} />
-                    <h4 className="font-semibold text-slate-200 text-xs group-hover:text-blue-400 transition-colors">
+                    <ShieldAlert className={`w-4 h-4 ${item.severity === 'HIGH' ? 'text-red-600 dark:text-red-400' : 'text-amber-600 dark:text-amber-400'}`} />
+                    <h4 className="font-semibold text-slate-800 dark:text-slate-200 text-xs group-hover:text-[#34A99D] transition-colors">
                       {item.title}
                     </h4>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-mono text-slate-400">
+                    <span className="text-[10px] font-mono text-slate-600 dark:text-slate-400 font-medium">
                       {Math.round(item.confidence * 100)}% Conf
                     </span>
                     <Badge label={item.severity} variant={variant} />
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-400 leading-relaxed font-sans pl-6">
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans pl-6">
                   {item.description}
                 </p>
 
-                <div className="pl-6 flex items-center justify-between text-[10px] font-mono text-slate-500 border-t border-slate-800/60 pt-2 mt-1">
+                <div className="pl-6 flex items-center justify-between text-[10px] font-mono text-slate-500 border-t border-slate-200 dark:border-slate-800/60 pt-2 mt-1">
                   <span>Source: {item.source}</span>
-                  <span className="text-blue-400 group-hover:underline">Click region detail →</span>
+                  <span className="text-[#34A99D] group-hover:underline font-semibold">Click region detail →</span>
                 </div>
               </div>
             );
