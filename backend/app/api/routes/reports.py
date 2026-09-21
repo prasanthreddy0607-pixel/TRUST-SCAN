@@ -27,11 +27,14 @@ async def get_report_pdf(screening_id: str):
 
 @router.get("/files/{file_name:path}")
 async def get_stored_file(file_name: str):
-    """Serve uploaded or annotated image files safely."""
-    # Check uploads directory
-    target = os.path.join(settings.UPLOAD_DIR, os.path.basename(file_name))
+    """Serve uploaded, annotated, or preset demo image files safely."""
+    clean_name = os.path.basename(file_name)
+    target = os.path.join(settings.UPLOAD_DIR, clean_name)
     if not os.path.exists(target):
-        target = os.path.join(settings.REPORTS_DIR, os.path.basename(file_name))
+        target = os.path.join(settings.REPORTS_DIR, clean_name)
+    if not os.path.exists(target):
+        demo_dir = os.path.join(os.path.dirname(settings.BASE_DIR), "demo_data")
+        target = os.path.join(demo_dir, clean_name)
     if not os.path.exists(target):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Requested file not found.")
     
