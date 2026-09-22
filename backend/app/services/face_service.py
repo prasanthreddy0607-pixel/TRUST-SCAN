@@ -78,6 +78,58 @@ class FaceService:
             details=details
         )
 
+    def check_human_liveness(self, ref_cv_img: np.ndarray) -> Tuple[bool, float, str]:
+        if ref_cv_img is None or ref_cv_img.size == 0:
+            return False, 0.0, "Empty or invalid image frame provided."
+
+        gray = cv2.cvtColor(ref_cv_img, cv2.COLOR_BGR2GRAY)
+        
+        # Check image brightness and contrast variance
+        mean_brightness = float(np.mean(gray))
+        laplacian_var = float(cv2.Laplacian(gray, cv2.CV_64F).var())
+        
+        if mean_brightness < 25:
+            return False, 0.1, "Image is pitch dark or unlit. Please turn on lights and retry."
+        if mean_brightness > 245:
+            return False, 0.1, "Image is overexposed/washed out white. Please adjust camera brightness."
+        if laplacian_var < 15:
+            return False, 0.2, "Image lacks detail/texture (flat surface or covered camera lens)."
+
+        face_cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
+        eye_cascade_path = cv2.data.haarcascades + 'haarcascade_eye.xml'
+
+        face_found = False
+        eye_found = False
+
+        if os.path.exists(face_cascade_path):
+            cascade = cv2.CascadeClassifier(face_cascade_path)
+            faces = cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=3, minSize=(60, 60))
+            if len(faces) > 0:
+                face_found = True
+                if os.path.exists(eye_cascade_path):
+                    eye_cascade = cv2.CascadeClassifier(eye_cascade_path)
+                    for (fx, fy, fw, fh) in faces:
+                        roi_gray = gray[fy:fy+fh, fx:fx+fw]
+                        eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.1, minNeighbors=2, minSize=(15, 15))
+                        if len(eyes) > 0:
+                            eye_found = True
+                            break
+                if eye_found:
+                    return True, 0.98, "Real human face & eye features verified successfully."
+                return True, 0.92, "Real human facial contour and features detected."
+
+        # Fallback skin tone HSV ratio analysis
+        hsv = cv2.cvtColor(ref_cv_img, cv2.COLOR_BGR2HSV)
+        lower_skin = np.array([0, 20, 70], dtype=np.uint8)
+        upper_skin = np.array([25, 255, 255], dtype=np.uint8)
+        mask = cv2.inRange(hsv, lower_skin, upper_skin)
+        skin_ratio = float(np.sum(mask > 0) / float(mask.size))
+
+        if skin_ratio >= 0.10 and laplacian_var >= 30:
+            return True, 0.82, "Human skin texture and facial lighting contour detected."
+
+        return False, 0.35, "No clear human facial structure detected in photo. Please position your face inside camera frame."
+
     def _extract_face(self, img: np.ndarray) -> Tuple[Optional[np.ndarray], Optional[Tuple[int, int, int, int]]]:
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         face_cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'

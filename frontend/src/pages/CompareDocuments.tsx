@@ -29,11 +29,11 @@ export const CompareDocuments: React.FC = () => {
     <PageContainer>
       <div className="space-y-6">
         <div>
-          <h1 className="text-2xl font-bold text-slate-100 tracking-tight flex items-center gap-2">
-            <GitCompare className="w-6 h-6 text-blue-400" />
+          <h1 className="text-2xl font-bold text-[#2C1A0E] dark:text-[#F9EBD5] tracking-tight flex items-center gap-2">
+            <GitCompare className="w-6 h-6 text-[#8B5320] dark:text-[#D39F67]" />
             <span>Document Comparison & Difference Detection</span>
           </h1>
-          <p className="text-xs text-slate-400 font-mono mt-0.5">
+          <p className="text-xs text-[#8A715C] dark:text-[#C8A889] font-mono mt-0.5">
             Compare baseline original document against presented sample to isolate image modifications
           </p>
         </div>

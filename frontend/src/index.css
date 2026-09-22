@@ -3,8 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 110%;
+  }
+
+  body, p, span, li, td, th, label, input, textarea, select {
+    font-family: 'Cutive Mono', monospace;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Anonymous Pro', monospace !important;
+  }
+
+  button, input[type="button"], input[type="submit"], .btn, .font-button {
+    font-family: 'Anonymous Pro', monospace !important;
+    font-weight: 700 !important;
+  }
+
   body {
-    @apply bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden;
+    @apply bg-[#FDF7E4] dark:bg-[#1C110A] text-[#2C1A0E] dark:text-[#F9EBD5] antialiased overflow-x-hidden transition-colors duration-200;
   }
 
   ::-webkit-scrollbar {
@@ -12,37 +29,47 @@
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #FAEED1;
+  }
+  .dark ::-webkit-scrollbar-track {
+    background: #281B12;
   }
   ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #DCC391;
+    border-radius: 4px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #4A3324;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: #C7A770;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #6B3E16;
   }
 }
 
 @layer components {
-  /* Minimal Enterprise Card */
+  /* Light Biscuit Card */
   .glass-panel,
   .card-panel {
-    @apply bg-white border border-slate-200/90 rounded-xl shadow-sm text-slate-900;
+    @apply bg-[#FAEED1] dark:bg-[#281B12] border border-[#EEDCB2] dark:border-[#4A3324] rounded-xl shadow-sm text-[#2C1A0E] dark:text-[#F9EBD5] transition-all duration-150;
   }
 
   .glass-panel-hover,
   .card-panel-hover {
-    @apply transition-all duration-150 hover:border-slate-300 hover:shadow-md;
+    @apply transition-all duration-150 hover:border-[#D6BB9B] dark:hover:border-[#6B3E16] hover:shadow-md;
   }
 
-  /* Minimal Status Badges */
+  /* Status Badges */
   .badge-low {
-    @apply bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+    @apply bg-[#E8F5EE] dark:bg-[#1B382B] text-[#2E7D5E] dark:text-[#A8E6CF] border border-[#A3D9C3] dark:border-[#2E7D5E]/40 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
   }
   .badge-medium {
-    @apply bg-amber-50 text-amber-700 border border-amber-200 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+    @apply bg-[#FDF3E6] dark:bg-[#3D2914] text-[#B87322] dark:text-[#F2C994] border border-[#F5D8B3] dark:border-[#B87322]/40 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
   }
   .badge-high {
-    @apply bg-rose-50 text-rose-700 border border-rose-200 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+    @apply bg-[#FDE8E8] dark:bg-[#3E1A17] text-[#C0392B] dark:text-[#F8B4B4] border border-[#F8B4B4] dark:border-[#C0392B]/40 px-2.5 py-0.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
   }
 }

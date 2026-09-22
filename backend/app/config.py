@@ -18,6 +18,7 @@ class Settings:
     
     # Environment Keys
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    VISION_API_KEY: str = os.getenv("VISION_API_KEY", "")
     MONGODB_URI: str = os.getenv("MONGODB_URI", "")
     DATABASE_NAME: str = os.getenv("DATABASE_NAME", "trustscan")
     FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5173")

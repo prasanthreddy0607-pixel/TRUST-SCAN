@@ -26,8 +26,8 @@ export const UploadProgress: React.FC<UploadProgressProps> = ({ currentStepIndex
   return (
     <div className="glass-panel p-6 max-w-xl mx-auto space-y-6">
       <div className="text-center">
-        <h3 className="font-bold text-slate-100 text-sm tracking-wide">Executing Evidence Screening Pipeline</h3>
-        <p className="text-xs text-slate-400 mt-1 font-mono">Running automated inspection engines...</p>
+        <h3 className="font-bold text-[#2C1A0E] dark:text-[#F9EBD5] text-sm tracking-wide">Executing Evidence Screening Pipeline</h3>
+        <p className="text-xs text-[#8A715C] dark:text-[#C8A889] mt-1 font-mono">Running automated inspection engines...</p>
       </div>
 
       <div className="space-y-3">
@@ -41,16 +41,16 @@ export const UploadProgress: React.FC<UploadProgressProps> = ({ currentStepIndex
               key={stepLabel}
               className={`flex items-center justify-between p-2.5 rounded-lg border text-xs font-mono transition-all ${
                 status === 'completed'
-                  ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
+                  ? 'bg-[#E8F5EE] dark:bg-[#1B382B] border-[#A3D9C3] dark:border-[#2E7D5E]/40 text-[#2E7D5E] dark:text-[#A8E6CF]'
                   : status === 'in_progress'
-                  ? 'bg-blue-500/10 border-blue-500/30 text-blue-400 shadow-md shadow-blue-500/5'
-                  : 'bg-navy-950/40 border-slate-800 text-slate-500'
+                  ? 'bg-[#F4EAD9] dark:bg-[#382619] border-[#D6BB9B] dark:border-[#6B3E16] text-[#8B5320] dark:text-[#D39F67] shadow-sm'
+                  : 'bg-[#FFFDF9]/40 dark:bg-[#1C110A]/40 border-[#E8D6BD] dark:border-[#4A3324] text-[#8A715C] dark:text-[#C8A889]/60'
               }`}
             >
               <div className="flex items-center gap-3">
-                {status === 'completed' && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
-                {status === 'in_progress' && <Loader2 className="w-4 h-4 text-blue-400 animate-spin" />}
-                {status === 'pending' && <Circle className="w-4 h-4 text-slate-600" />}
+                {status === 'completed' && <CheckCircle2 className="w-4 h-4 text-[#2E7D5E] dark:text-[#A8E6CF]" />}
+                {status === 'in_progress' && <Loader2 className="w-4 h-4 text-[#8B5320] dark:text-[#D39F67] animate-spin" />}
+                {status === 'pending' && <Circle className="w-4 h-4 text-[#8A715C] dark:text-[#C8A889]/40" />}
                 <span className="font-sans">{stepLabel}</span>
               </div>
               <span className="text-[10px] uppercase tracking-wider font-semibold">

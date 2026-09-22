@@ -47,11 +47,11 @@ export const DemoMode: React.FC = () => {
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-slate-100 tracking-tight flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-amber-400" />
+            <h1 className="text-2xl font-bold text-[#2C1A0E] dark:text-[#F9EBD5] tracking-tight flex items-center gap-2">
+              <Sparkles className="w-6 h-6 text-[#8B5320] dark:text-[#D39F67]" />
               <span>Hackathon Demo Mode — Preset Test Scenarios</span>
             </h1>
-            <p className="text-xs text-slate-400 font-mono mt-0.5">
+            <p className="text-xs text-[#8A715C] dark:text-[#C8A889] font-mono mt-0.5">
               Deterministic pre-generated synthetic identity documents for judge presentation
             </p>
           </div>
@@ -66,17 +66,17 @@ export const DemoMode: React.FC = () => {
             {scenarios.map((s) => (
               <div
                 key={s.id}
-                className="glass-panel p-6 flex flex-col justify-between glass-panel-hover space-y-4 border-slate-800"
+                className="glass-panel p-6 flex flex-col justify-between glass-panel-hover space-y-4"
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase">
+                    <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-[#F4EAD9] dark:bg-[#382619] text-[#8B5320] dark:text-[#D39F67] border border-[#D6BB9B] dark:border-[#6B3E16] uppercase">
                       {s.badge}
                     </span>
-                    <span className="text-[11px] font-mono text-slate-400">{s.expected_risk}</span>
+                    <span className="text-[11px] font-mono text-[#8A715C] dark:text-[#C8A889]">{s.expected_risk}</span>
                   </div>
-                  <h3 className="font-bold text-slate-100 text-sm tracking-wide">{s.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed font-sans">{s.description}</p>
+                  <h3 className="font-bold text-[#2C1A0E] dark:text-[#F9EBD5] text-sm tracking-wide">{s.title}</h3>
+                  <p className="text-xs text-[#6E5745] dark:text-[#C8A889] leading-relaxed font-sans">{s.description}</p>
                 </div>
 
                 <Button

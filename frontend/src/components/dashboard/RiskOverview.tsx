@@ -19,19 +19,19 @@ export const RiskOverview: React.FC<RiskOverviewProps> = ({ screenings }) => {
   });
 
   const data = [
-    { name: 'Low Risk', value: lowCount, color: '#10b981' },
-    { name: 'Medium Risk', value: mediumCount, color: '#f59e0b' },
-    { name: 'High Risk', value: highCount, color: '#ef4444' },
+    { name: 'Low Risk', value: lowCount, color: '#2E7D5E' },
+    { name: 'Medium Risk', value: mediumCount, color: '#B87322' },
+    { name: 'High Risk', value: highCount, color: '#C0392B' },
   ];
 
   return (
     <div className="glass-panel p-5 flex flex-col h-full">
-      <h3 className="font-bold text-slate-800 dark:text-slate-100 text-sm tracking-wide">Risk Assessment Distribution</h3>
-      <p className="text-xs text-slate-500 dark:text-slate-400 mb-4">Inspection breakdown by evidence severity level</p>
+      <h3 className="font-bold text-[#2C1A0E] dark:text-[#F9EBD5] text-sm tracking-wide">Risk Assessment Distribution</h3>
+      <p className="text-xs text-[#8A715C] dark:text-[#C8A889] mb-4">Inspection breakdown by evidence severity level</p>
 
       <div className="flex-1 min-h-[220px] w-full flex items-center justify-center">
         {screenings.length === 0 ? (
-          <p className="text-xs font-mono text-slate-500 dark:text-slate-400">No data available for chart visualization</p>
+          <p className="text-xs font-mono text-[#8A715C] dark:text-[#C8A889]">No data available for chart visualization</p>
         ) : (
           <ResponsiveContainer width="100%" height={220}>
             <PieChart>
@@ -45,14 +45,14 @@ export const RiskOverview: React.FC<RiskOverviewProps> = ({ screenings }) => {
                 dataKey="value"
               >
                 {data.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} stroke="#0f172a" strokeWidth={2} />
+                  <Cell key={`cell-${index}`} fill={entry.color} stroke="#281B12" strokeWidth={2} />
                 ))}
               </Pie>
               <Tooltip
-                contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: '8px', fontSize: '12px' }}
-                itemStyle={{ color: '#f8fafc' }}
+                contentStyle={{ backgroundColor: '#281B12', borderColor: '#4A3324', borderRadius: '8px', fontSize: '12px' }}
+                itemStyle={{ color: '#F9EBD5' }}
               />
-              <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ fontSize: '11px', color: '#94a3b8' }} />
+              <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ fontSize: '11px', color: '#C8A889' }} />
             </PieChart>
           </ResponsiveContainer>
         )}

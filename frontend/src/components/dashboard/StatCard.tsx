@@ -17,10 +17,10 @@ export const StatCard: React.FC<StatCardProps> = ({
   icon: Icon,
   color = 'blue'
 }) => {
-  let colorStyles = 'text-indigo-400 bg-indigo-500/15 border-indigo-500/25';
-  if (color === 'red') colorStyles = 'text-rose-400 bg-rose-500/15 border-rose-500/25';
-  if (color === 'amber') colorStyles = 'text-amber-400 bg-amber-500/15 border-amber-500/25';
-  if (color === 'emerald') colorStyles = 'text-emerald-400 bg-emerald-500/15 border-emerald-500/25';
+  let colorStyles = 'text-[#8B5320] dark:text-[#D39F67] bg-[#F4EAD9] dark:bg-[#382619] border-[#D6BB9B] dark:border-[#6B3E16]';
+  if (color === 'red') colorStyles = 'text-[#C0392B] dark:text-[#F8B4B4] bg-[#FDE8E8] dark:bg-[#3E1A17] border-[#F8B4B4] dark:border-[#C0392B]/40';
+  if (color === 'amber') colorStyles = 'text-[#B87322] dark:text-[#F2C994] bg-[#FDF3E6] dark:bg-[#3D2914] border-[#F5D8B3] dark:border-[#B87322]/40';
+  if (color === 'emerald') colorStyles = 'text-[#2E7D5E] dark:text-[#A8E6CF] bg-[#E8F5EE] dark:bg-[#1B382B] border-[#A3D9C3] dark:border-[#2E7D5E]/40';
 
   return (
     <div className="glass-panel p-5 glass-panel-hover flex items-start justify-between">
