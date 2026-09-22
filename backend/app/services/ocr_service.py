@@ -33,23 +33,29 @@ class OCRService:
     def extract(self, cv_img: np.ndarray, doc_type: str = "passport") -> OCRResult:
         raw_ocr = []
         parsed_gemini_fields = None
-        api_key = settings.VISION_API_KEY or settings.GEMINI_API_KEY
 
-        # 1. Primary Engine: Gemini Multimodal Vision OCR
-        if api_key:
+        gcp_key = settings.VISION_API_KEY if settings.VISION_API_KEY.startswith("AIzaSy") else ""
+        gemini_key = settings.GEMINI_API_KEY or (settings.VISION_API_KEY if not settings.VISION_API_KEY.startswith("AIzaSy") else "")
+
+        # 1. Try GCP Cloud Vision REST API if GCP API key is configured
+        if gcp_key:
             try:
-                raw_ocr, parsed_gemini_fields = self._gemini_vision_ocr(cv_img, api_key)
-            except Exception as e:
-                print(f"Gemini Multimodal Vision OCR error ({e}). Trying GCP REST API / fallback engines.")
-                try:
-                    raw_ocr = self._google_vision_ocr(cv_img, api_key)
-                except Exception as gcp_err:
-                    print(f"GCP Vision REST API error ({gcp_err}). Falling back to secondary engine.")
-                    raw_ocr = self._fallback_extract(cv_img)
-        else:
+                raw_ocr = self._google_vision_ocr(cv_img, gcp_key)
+            except Exception as gcp_err:
+                print(f"GCP Cloud Vision REST API error ({gcp_err}). Trying Gemini Vision / fallback engines.")
+
+        # 2. Try Gemini Multimodal Vision OCR if Gemini key is configured
+        if not raw_ocr and gemini_key:
+            try:
+                raw_ocr, parsed_gemini_fields = self._gemini_vision_ocr(cv_img, gemini_key)
+            except Exception as gem_err:
+                print(f"Gemini Multimodal Vision OCR error ({gem_err}). Falling back to secondary engine.")
+
+        # 3. Fallback to secondary OCR engines (PaddleOCR / EasyOCR / OpenCV Heuristics)
+        if not raw_ocr:
             raw_ocr = self._fallback_extract(cv_img)
 
-        # 2. Extract structured fields from OCR results
+        # Extract structured fields from OCR results
         if parsed_gemini_fields:
             fields = parsed_gemini_fields
         else:
